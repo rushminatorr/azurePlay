@@ -1,0 +1,5 @@
+azure/.terraform/
+azure/terraform.*
+packet/.terraform/
+packet/terraform.*
+.idea/
