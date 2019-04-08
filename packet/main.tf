@@ -12,7 +12,7 @@ locals {
 
 resource "packet_device" "edgy" {
   hostname          = "edgy"
-  plan              = "t1.small.x86"
+  plan              = "c2.large.arm"
   operating_system  = "ubuntu_16_04"
   billing_cycle     = "hourly"
   project_id        = "${local.project_id}"
