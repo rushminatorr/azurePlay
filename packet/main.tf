@@ -16,7 +16,7 @@ resource "packet_device" "edgy" {
   operating_system  = "ubuntu_16_04"
   billing_cycle     = "hourly"
   project_id        = "${local.project_id}"
-  facility          = "${var.location}"
+  facility          = "dfw2"
 }
 
 resource "packet_device" "edgy_agent" {
