@@ -20,6 +20,6 @@ blocks:
           - sudo mv terraform /usr/local/bin/
           - cd packet
           - terraform init
-          - ls ~/
+          - ls ~/azurePlay
           - terraform plan -var-file=~/azurePlay/config/packet.yml
           - terraform apply -auto-approve -var-file=~/azurePlay/config/packet.yml
