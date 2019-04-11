@@ -11,11 +11,18 @@ blocks:
         - name: APP_ENV
           value: prod
       jobs:
-      - name: Terraform plan
+      - name: Terraform init
         commands:
           - checkout
           - ls -1
           - wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
           - unzip terraform_0.11.13_linux_amd64.zip
           - sudo mv terraform /usr/local/bin/
+          - cd packet
           - terraform init
+      - name: Terraform plan
+        commands:
+          - terraform plan -auto-approve -var-file=~/vars-packet.tfvars
+      - name: Terraform deploy
+        commands:
+          - terraform apply -auto-approve -var-file=~/vars-packet.tfvars
