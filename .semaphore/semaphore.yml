@@ -19,7 +19,8 @@ blocks:
           - unzip terraform_0.11.13_linux_amd64.zip
           - sudo mv terraform /usr/local/bin/
           - cd packet
+          - ls
           - terraform init
           - ls ~/azurePlay
-          - terraform plan -var-file=~/azurePlay/config/packet.yml
-          - terraform apply -auto-approve -var-file=~/azurePlay/config/packet.yml
+          - terraform plan -var-file=packet.yml
+          - terraform apply -auto-approve -var-file=packet.yml
