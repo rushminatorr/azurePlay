@@ -20,5 +20,6 @@ blocks:
           - sudo mv terraform /usr/local/bin/
           - cd packet
           - terraform init
+          - cat ~/vars-packet.tfvars
           - terraform plan -var-file=~/vars-packet.tfvars
           - terraform apply -auto-approve -var-file=~/vars-packet.tfvars
